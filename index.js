@@ -25,6 +25,10 @@ const start = async () => {
 
         console.log("Connected to Mongoose DB");
 
+        app.get("/", (req, res) => {
+            res.status(200).json({success:true, message:"Welcome to THE server."});
+        })
+
         const authRouter = require("./routes/authRouter");
         app.use("/api", authRouter);
 

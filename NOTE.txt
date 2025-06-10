@@ -15,3 +15,11 @@ git remote add origin https://github.com/konoshenkov007/react-app-second.git
 git push -u origin main
 
 vercel or render
+
+NOTE:
+After pushing to github, assuming you modified your code offline in vscode,
+you should do this to update it on github too:
+
+git add .
+git commit -m 'made changes to index.js and NOTE.txt'
+git push
