@@ -29,7 +29,7 @@ const middleware = (req, res, next) => {
 
     fs.writeFile(logFilePath, logData, { flag: "a" }, (err) => {
         if (err) {
-            console.error(`❌ Couldn't write to log file: ${err.message}`);
+            console.log(`❌ Couldn't write to log file: ${err.message}`);
         } else {
             console.log("📝 Visitor logged:", visitor);
         }

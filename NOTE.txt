@@ -7,6 +7,8 @@ npm install validator
 npm install bcrypt
 npm install jsonwebtokens
 
+DEPLOYING TO GITHUB 
+
 git init
 git add .
 git commit -m 'my sample api setup'
@@ -14,7 +16,7 @@ git branch -M main
 git remote add origin https://github.com/konoshenkov007/react-app-second.git
 git push -u origin main
 
-vercel or render
+HOSTING ON VERCEL OR RENDER
 
 NOTE:
 After pushing to github, assuming you modified your code offline in vscode,
@@ -23,3 +25,7 @@ you should do this to update it on github too:
 git add .
 git commit -m 'made changes to index.js and NOTE.txt'
 git push
+
+NOTE:
+You must set a PORT and SERVER in the .env file. 
+SERVER = 0.0.0.0

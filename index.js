@@ -16,7 +16,7 @@ app.use(middleware);
 
 const start = async () => {
     if(!process.env.mongoose_URI){
-        console.error("ERROR: Mongoose URI missing in .env");
+        console.log("ERROR: Mongoose URI missing in .env");
         process.exit(1);
     }
 
@@ -48,7 +48,7 @@ const start = async () => {
             console.log(`Now Listening on ${host}:${PORT} ...`);
         });
     } catch (error) {
-        console.error(error);
+        console.log(error);
         process.exit(1);
     }
 
