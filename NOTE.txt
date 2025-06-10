@@ -6,6 +6,10 @@ npm install mongoose
 npm install validator
 npm install bcrypt
 npm install jsonwebtokens
+npm install express-fileupload
+npm install cloudinary
+
+Upload files using Cloudinery
 
 DEPLOYING TO GITHUB 
 

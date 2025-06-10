@@ -9,10 +9,20 @@ const mongoose = require("mongoose");
 
 const auth = require("./middleware/authentication"); 
 
-const middleware = require("./middleware/logger");
+const logger = require("./middleware/logger");
 
+const fileUpload = require("express-fileupload");
+
+const cloudinary = require("cloudinary").v2;
+cloudinary.config({ 
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
+    api_key: process.env.CLOUDINARY_API_KEY, 
+    api_secret: process.env.CLOUDINARY_API_SECRET // Click 'View API Keys' above to copy your API secret
+});
+
+app.use(fileUpload({useTempFiles: true}));
 app.use(express.json());
-app.use(middleware);
+app.use(logger);
 
 const start = async () => {
     if(!process.env.mongoose_URI){
@@ -28,6 +38,9 @@ const start = async () => {
         app.get("/", (req, res) => {
             res.status(200).json({success:true, message:"Welcome to THE server."});
         })
+
+        const uploadRouter = require("./routes/uploadRouter");
+        app.use("/api", uploadRouter);
 
         const authRouter = require("./routes/authRouter");
         app.use("/api", authRouter);
