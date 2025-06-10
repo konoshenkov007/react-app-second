@@ -1,0 +1,17 @@
+npm init -y
+npm install express@4
+npm install nodemon --save-dev
+npm install dotenv
+npm install mongoose
+npm install validator
+npm install bcrypt
+npm install jsonwebtokens
+
+git init
+git add .
+git commit -m 'my sample api setup'
+git branch -M main
+git remote add origin https://github.com/konoshenkov007/react-app-second.git
+git push -u origin main
+
+vercel or render

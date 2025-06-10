@@ -1,0 +1,14 @@
+| Code | Type            | Meaning               | When to Use                                  |
+| ---- | --------------- | --------------------- | -------------------------------------------- |
+| 200  | ✅ Success       | OK                    | Successful GET, POST, etc.                   |
+| 201  | ✅ Created       | Resource Created      | After creating a new user or object          |
+| 204  | ✅ No Content    | No data to return     | After successful DELETE or update            |
+| 400  | ❌ Client Error  | Bad Request           | Missing or invalid input                     |
+| 401  | ❌ Client Error  | Unauthorized          | Invalid or missing token                     |
+| 403  | ❌ Client Error  | Forbidden             | Valid token but no access rights             |
+| 404  | ❌ Client Error  | Not Found             | Nonexistent resource                         |
+| 409  | ❌ Client Error  | Conflict              | Duplicate entries, e.g., email already taken |
+| 422  | ❌ Client Error  | Unprocessable Entity  | Validation failed with correct format        |
+| 429  | ❌ Client Error  | Too Many Requests     | Rate limiting or abuse prevention            |
+| 500  | 🔥 Server Error  | Internal Server Error | Unexpected crash or unhandled exception      |
+| 503  | 🔥 Server Error | Service Unavailable   | Server down, maintenance, or overload        |
